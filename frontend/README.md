@@ -1,3 +1,3 @@
-# Advanced-React
+# Shelter A Musician Store
 
 frontend
