@@ -42,6 +42,7 @@ type Query {
   users: [User]!
   order(id: ID!): Order
   orders(orderBy: OrderOrderByInput): [Order]!
+  userItems(where: ItemWhereInput, orderBy: ItemOrderByInput): [Item]!
 }
 
 type User {

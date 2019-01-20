@@ -68,6 +68,21 @@ const Query = {
       },
       info
     );
+  },
+  async userItems(parent, args, ctx, info) {
+    const { userId } = ctx.request;
+    if (!userId) {
+      throw new Error("You must be signed in!");
+    }
+
+    return ctx.db.query.items(
+      {
+        where: {
+          user: { id: userId }
+        }
+      },
+      info
+    );
   }
 };
 
