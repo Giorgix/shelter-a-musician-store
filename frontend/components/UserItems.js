@@ -41,47 +41,45 @@ const UserItemsStyles = styled.li`
 class UserItems extends Component {
   render() {
     return (
-      <Center>
-        <Query query={USER_ITEMS_QUERY}>
-          {({ data, error, loading }) => {
-            if (loading) return <p>Loading...</p>;
-            if (error) return <p>Error: {error.message}</p>;
-            return (
-              <>
-                <h4>Your items</h4>
-                <div>
-                  {data.userItems.map(item => (
-                    <UserItemsStyles key={item.id}>
-                      <img src={item.image} alt={item.title} height="100px" />
-                      <div className="cart-item-details">
-                        {" "}
-                        <h3>
-                          <Link
-                            href={{
-                              pathname: "/item",
-                              query: { id: item.id }
-                            }}
-                          >
-                            <a>{item.title}</a>
-                          </Link>
-                        </h3>
-                      </div>
-                      <Link
-                        href={{
-                          pathname: "update",
-                          query: { id: item.id }
-                        }}
-                      >
-                        <SickButton>Edit</SickButton>
-                      </Link>
-                    </UserItemsStyles>
-                  ))}
-                </div>
-              </>
-            );
-          }}
-        </Query>
-      </Center>
+      <Query query={USER_ITEMS_QUERY}>
+        {({ data, error, loading }) => {
+          if (loading) return <p>Loading...</p>;
+          if (error) return <p>Error: {error.message}</p>;
+          return (
+            <div>
+              <h2>Your items</h2>
+              <div>
+                {data.userItems.map(item => (
+                  <UserItemsStyles key={item.id}>
+                    <img src={item.image} alt={item.title} height="100px" />
+                    <div className="cart-item-details">
+                      {" "}
+                      <h3>
+                        <Link
+                          href={{
+                            pathname: "/item",
+                            query: { id: item.id }
+                          }}
+                        >
+                          <a>{item.title}</a>
+                        </Link>
+                      </h3>
+                    </div>
+                    <Link
+                      href={{
+                        pathname: "update",
+                        query: { id: item.id }
+                      }}
+                    >
+                      <SickButton>Edit</SickButton>
+                    </Link>
+                  </UserItemsStyles>
+                ))}
+              </div>
+            </div>
+          );
+        }}
+      </Query>
     );
   }
 }
