@@ -1,3 +1,4 @@
 .vscode
+.directory
 /node_modules
 variables.env
