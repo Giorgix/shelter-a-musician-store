@@ -2,7 +2,7 @@
 
 exports[`<Order /> renders the order and matches snapshot 1`] = `
 <div
-  className="OrderStyles-sc-4oqalm-0 camMij"
+  className="OrderStyles-sc-13cjoaz-0 eGMIDF"
   data-test="order"
 >
   <SideEffect(Head)>
@@ -29,7 +29,7 @@ exports[`<Order /> renders the order and matches snapshot 1`] = `
       Date
     </span>
     <span>
-      April 1, 2018 2:00 AM
+      April 6, 2018 9:24 PM
     </span>
   </p>
   <p>

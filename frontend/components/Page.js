@@ -5,7 +5,7 @@ import Meta from "./Meta";
 import styled, { ThemeProvider, injectGlobal } from "styled-components";
 
 const theme = {
-  red: "#FF0000",
+  red: "#d2353c",
   black: "#393939",
   grey: "#3A3A3A",
   lightgrey: "#E1E1E1",
@@ -32,6 +32,30 @@ injectGlobal`
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'catamaran';
+    src: url('/static/Catamaran-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'muli';
+    src: url('/static/Muli-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'catamaran';
+    src: url('/static/Catamaran-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'muli';
+    src: url('/static/Muli-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
   html {
     box-sizing: border-box;
     font-size: 10px;
@@ -44,7 +68,7 @@ injectGlobal`
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
-    font-family: 'radnika_next';
+    font-family: 'muli';
   }
   a {
     text-decoration: none;

@@ -2,7 +2,7 @@
 
 exports[`<Nav /> renders a minimal nav when signed out 1`] = `
 <ul
-  className="NavStyles-sc-11c0d2g-0 bjCNSW"
+  className="NavStyles-sc-3sk5mo-0 hjhFJO"
   data-test="nav"
 >
   <Link
@@ -30,7 +30,7 @@ exports[`<Nav /> renders a minimal nav when signed out 1`] = `
 
 exports[`<Nav /> renders the amount of items in the cart 1`] = `
 <div
-  className="count CartCount__Dot-xxvp4g-1 kDZyEW"
+  className="count CartCount__Dot-sc-1bkmxbm-1 uSukk"
 >
   9
 </div>

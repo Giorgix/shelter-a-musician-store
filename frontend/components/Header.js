@@ -30,6 +30,10 @@ const Logo = styled.h1`
     text-transform: uppercase;
     text-decoration: none;
   }
+  img {
+    max-height: 50px;
+    vertical-align: text-bottom;
+  }
   @media (max-width: 1300px) {
     margin: 0;
     text-align: center;
@@ -60,7 +64,9 @@ const Header = () => (
     <div className="bar">
       <Logo>
         <Link href="/">
-          <a href="">Shelter Store</a>
+          <a href="">
+            Shelter <img src="/static/logo.png" alt="" /> Store
+          </a>
         </Link>
       </Logo>
       <Nav />
